@@ -14,7 +14,11 @@
     in
     pkgs.mkShell {
       packages = with pkgs; [
-        hello
+        qemu
+        nasm
+        gnumake
+        pkgsCross.x86_64-embedded.buildPackages.gcc
+        pkgsCross.x86_64-embedded.buildPackages.binutils
       ];
     };
   };
